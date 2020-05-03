@@ -2,9 +2,8 @@
 
 > *This project is not maintained anymore*
 >
-> *If you like it or continue to use it fork it please.*
+> *FORKED : to modify for latest (2.1) Pico*
 
----
 ---
 
 Pico edit - An admin interface for Pico CMS
