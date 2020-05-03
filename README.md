@@ -2,7 +2,7 @@
 
 > *This project is not maintained anymore*
 >
-> *FORKED : to modify for latest (2.1) Pico*
+> *THIS FORK: modified for latest (2.1) Pico, plus...*
 
 ---
 
@@ -37,11 +37,14 @@ Features:
 
 * Edit Pico options
 
-Options (Pico "config/config.php"):
+Options (include in "config/config.yml", or add "config/custom.yml"):
 
-	$config['pico_edit_404'] = true;
-	$config['pico_edit_options'] = false;			// Disallow options editing
-	$config['pico_edit_default_author'] = 'Me';		// Default author for new pages
+    ##
+    # Pico_Edit settings
+    #
+    pico_edit_404: true
+    pico_edit_options: false        # Disallow options editing
+    pico_edit_default_author: Me    # Default author for new pages
 
 ![Screenshot](screenshot.png)
 
