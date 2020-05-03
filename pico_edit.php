@@ -542,16 +542,16 @@ final class Pico_Edit extends AbstractPicoPlugin {
   }
 
   private function slugify( $text ) {
-    // replace non letter or digits by -
-    $text = preg_replace( '~[^\\pL\d]+~u', '-', $text );
+    // replace non letter or digits by -; allow sub-sub directories
+    $text = preg_replace( '~[^\\pL\d/]+~u', '-', $text );
     // trim
     $text = trim( $text, '-' );
     // transliterate
     $text = iconv( 'utf-8', 'us-ascii//TRANSLIT', $text );
     // lowercase
     $text = strtolower( $text );
-    // remove unwanted characters
-    $text = preg_replace( '~[^-\w]+~', '', $text );
+    // remove unwanted characters; allow sub-sub directories
+    $text = preg_replace( '~[^-\w/]+~', '', $text );
 
     return !empty( $text ) ? $text : FALSE;
   }
